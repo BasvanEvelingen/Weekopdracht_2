@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $stmt->bind_param("ssss", $param_titel, $param_omschrijving, $param_inhoud, $param_auteur);
                     
                     // Parameters zetten
-                    $param_name = $berichtTitel;
+                    $param_titel = $berichtTitel;
                     $param_omschrijving = $berichtOmschrijving;
                     $param_inhoud = $berichtInhoud;
                     $param_auteur = $auteur;
@@ -99,11 +99,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
         } else {
-            echo "Probeer het nogmaals, u dient de reCaptcha aan te klikken.";
+            echo "Probeer het nogmaals, u dient de reCaptcha in te vullen/aanklikken.";
 
         }
     } else {
-        echo "U moet de reCaptcha aanklikken.";
+        echo "U moet de reCaptcha invullen/aanklikken.";
     }
     // sluit connectie
     $mysqli->close();
